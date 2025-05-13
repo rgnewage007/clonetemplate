@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import {
   Card,
@@ -60,6 +64,43 @@ const testimonials: TestimonialProps[] = [
 ];
 
 export const Testimonials = () => {
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    gsap.timeline({})
+    .fromTo("#testimonials h2",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        ease: "power3.inOut"
+      }
+    )
+    .fromTo(".testimonialsText",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        ease: "power3.inOut"
+      })
+    .fromTo(".testimonialsCard",
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.9,
+        stagger: 0.2,
+        ease: "power3.inOut"
+      }
+    );
+    }, []);
+
+
   return (
     <section
       id="testimonials"
@@ -74,7 +115,7 @@ export const Testimonials = () => {
         This Landing Page
       </h2>
 
-      <p className="text-xl text-muted-foreground pt-4 pb-8">
+      <p className="text-xl text-muted-foreground pt-4 pb-8 testimonialsText">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde error
         facere hic reiciendis illo
       </p>
@@ -84,7 +125,7 @@ export const Testimonials = () => {
           ({ image, name, userName, comment }: TestimonialProps) => (
             <Card
               key={userName}
-              className="max-w-md md:break-inside-avoid overflow-hidden"
+              className="max-w-md md:break-inside-avoid overflow-hidden testimonialsCard"
             >
               <CardHeader className="flex flex-row items-center gap-4 pb-2">
                 <Avatar>
