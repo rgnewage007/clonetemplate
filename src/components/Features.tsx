@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -50,6 +54,55 @@ const featureList: string[] = [
 ];
 
 export const Features = () => {
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#features h2",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#features h2",
+          start: "top 70%",
+          end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+    "#features .bage",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 0.9,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#features h2",
+          start: "top 70%",
+          end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.timeline({})
+      .from(".CardFeature", {
+            opacity: 0,
+            duration: 0.5,
+            scale: 0.95,
+            delay: 0.9,
+            ease: 'power2.in'
+        });
+        
+  },[]);
+
   return (
     <section
       id="features"
@@ -67,7 +120,7 @@ export const Features = () => {
           <div key={feature}>
             <Badge
               variant="secondary"
-              className="text-sm"
+              className="text-sm bage"
             >
               {feature}
             </Badge>
@@ -77,7 +130,7 @@ export const Features = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
+          <Card key={title} className="CardFeature">
             <CardHeader>
               <CardTitle>{title}</CardTitle>
             </CardHeader>
@@ -88,7 +141,7 @@ export const Features = () => {
               <img
                 src={image}
                 alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
+                className="w-[200px] lg:w-[300px] mx-auto ImageFeature"
               />
             </CardFooter>
           </Card>
