@@ -1,4 +1,7 @@
 import { useState } from "react";
+import React, { useRef } from 'react';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -43,9 +46,29 @@ const routeList: RouteProps[] = [
 ];
 
 export const Navbar = () => {
+  // const { useRef } = React;
+    // console.log(React.version);
+  
+    gsap.registerPlugin(useGSAP);
+    const Nav = useRef<HTMLHeadingElement>(null);
+
+      // useEffect(() => {
+      //     console.log(Nav.current); 
+      // }, []);
+
+    useGSAP(() => {
+        gsap.from(Nav.current, {
+            duration: 1,
+            opacity: 0,
+            y: -100,
+            ease: "power3.in",
+            delay: 0.5,
+        });
+    },[Nav]);
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
-    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header ref={Nav} className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
