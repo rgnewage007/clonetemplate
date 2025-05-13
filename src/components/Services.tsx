@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
 import cubeLeg from "../assets/cube-leg.png";
@@ -30,8 +34,49 @@ const serviceList: ServiceProps[] = [
 ];
 
 export const Services = () => {
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".services",
+      { opacity: 0, x: 50 },
+      {
+      opacity: 1,
+      scale: 0.95,
+      duration: 0.8,
+      delay: 0.5,
+      ease: 'power2.in',
+        scrollTrigger: {
+          trigger: ".containerServices",
+          start: "top 70%",
+          end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      ".containerServices",
+      { opacity: 0, x: 50 },
+      {
+      opacity: 1,
+      scale: 0.95,
+      duration: 0.8,
+      delay: 0.5,
+      ease: 'power2.in',
+        scrollTrigger: {
+          trigger: ".containerServices",
+          start: "top 70%",
+          end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  },[]
+  );
+
   return (
-    <section className="container py-24 sm:py-32">
+    <section className="container py-24 sm:py-32 containerServices">
       <div className="grid lg:grid-cols-[1fr,1fr] gap-8 place-items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
@@ -46,7 +91,7 @@ export const Services = () => {
             dolor.
           </p>
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 services">
             {serviceList.map(({ icon, title, description }: ServiceProps) => (
               <Card key={title}>
                 <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
