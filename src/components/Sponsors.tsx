@@ -1,4 +1,7 @@
 import { Radar } from "lucide-react";
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 interface SponsorProps {
   icon: JSX.Element;
@@ -33,6 +36,28 @@ const sponsors: SponsorProps[] = [
 ];
 
 export const Sponsors = () => {
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#sponsors div",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#sponsors",
+            start: "top 70%",
+            end: "top 0%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <section
       id="sponsors"
