@@ -1,3 +1,7 @@
+import { gsap } from "gsap";
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../components/Icons";
 
@@ -35,6 +39,61 @@ const features: FeatureProps[] = [
 ];
 
 export const HowItWorks = () => {
+
+
+  gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      "#howItWorks h2",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#howItWorks h2",
+            start: "top 70%",
+            end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      "#howItWorks p",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 2.5,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#howItWorks h2",
+            start: "top 80%",
+            end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+    gsap.fromTo(
+      ".CardHowItWork",
+      { opacity: 0, x: 50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.9,
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#howItWorks h2",
+            start: "top 70%",
+            end: "top 0%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <section
       id="howItWorks"
@@ -56,7 +115,7 @@ export const HowItWorks = () => {
         {features.map(({ icon, title, description }: FeatureProps) => (
           <Card
             key={title}
-            className="bg-muted/50"
+            className="bg-muted/50 CardHowItWork"
           >
             <CardHeader>
               <CardTitle className="grid gap-4 place-items-center">
