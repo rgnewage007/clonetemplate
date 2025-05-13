@@ -1,3 +1,9 @@
+
+import gsap from 'gsap';
+import React, { useRef } from 'react';
+import { useGSAP } from '@gsap/react';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Badge } from "./ui/badge";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -14,10 +20,64 @@ import { LightBulbIcon } from "./Icons";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const HeroCards = () => {
+
+      gsap.registerPlugin(useGSAP, ScrollTrigger);
+
+      const Card1 = useRef<HTMLDivElement>(null);
+      const Card2 = useRef<HTMLDivElement>(null);
+      const Card3 = useRef<HTMLDivElement>(null);
+      const Card4 = useRef<HTMLDivElement>(null);
+
+      useGSAP(() => {
+          gsap.from(Card1.current, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.8,
+            delay: 1.5,
+            ease: 'power2.in'
+          })
+          gsap.from(Card2.current, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.8,
+            delay: 1.6,
+            ease: 'power2.in'
+          })
+          gsap.from(Card3.current, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.8,
+            delay: 1.9,
+            ease: 'power2.in'
+          })
+          gsap.from(Card4.current, {
+            opacity: 0,
+            scale: 0.95,
+            duration: 0.8,
+            delay: 1.8,
+            ease: 'power2.in'
+          })
+
+          Card3.current?.addEventListener('mouseenter', () => {
+              gsap.to(Card3.current, {
+                y: -10,
+                duration: 0.3,
+                ease: 'power2.out'});
+          });
+
+          Card3.current?.addEventListener('mouseleave', () => {
+              gsap.to(Card3.current, {
+                y: 0,
+                duration: 0.3,
+                ease: 'power2.out'});
+          });
+
+      },[]);
+
   return (
     <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
       {/* Testimonial */}
-      <Card className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card ref={Card1} className="absolute w-[340px] -top-[15px] drop-shadow-xl shadow-black/10 dark:shadow-white/10" >
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <Avatar>
             <AvatarImage
@@ -37,7 +97,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Team */}
-      <Card className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card ref={Card2} className="absolute right-[20px] top-4 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <img
             src="https://i.pravatar.cc/150?img=58"
@@ -109,7 +169,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Pricing */}
-      <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card ref={Card3} className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
             Free
@@ -154,7 +214,7 @@ export const HeroCards = () => {
       </Card>
 
       {/* Service */}
-      <Card className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
+      <Card ref={Card4} className="absolute w-[350px] -right-[10px] bottom-[35px]  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="space-y-1 flex md:flex-row justify-start items-start gap-4">
           <div className="mt-1 bg-primary/20 p-1 rounded-2xl">
             <LightBulbIcon />
