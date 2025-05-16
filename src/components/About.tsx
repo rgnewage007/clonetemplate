@@ -18,16 +18,12 @@ export const About = () => {
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                  About{" "}
+                  Acerca{" "}
                 </span>
-                Company
+                de la compañia
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                Se inician operaciones en México en el 2025, ayudando en el camino a muchas empresas dedicadas a la distribución de agua potable, en asesorías, en su instalación y en el dominio de entregar agua con la calidad que se merecen.
               </p>
             </div>
 

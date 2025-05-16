@@ -13,7 +13,7 @@ export const Footer = () => {
             className="font-bold text-xl flex"
           >
             <LogoIcon />
-            ShadcnUI/React
+            Agua Imperial
           </a>
         </div>
 
@@ -91,7 +91,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Features
+              Servicios
             </a>
           </div>
 
@@ -101,7 +101,7 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Pricing
+              Precios
             </a>
           </div>
 
@@ -111,13 +111,13 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              FAQ
+              Preguntas frecuentes
             </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-2">
-          <h3 className="font-bold text-lg">Community</h3>
+          <h3 className="font-bold text-lg">Comunidad Imperial</h3>
           <div>
             <a
               rel="noreferrer noopener"
@@ -134,19 +134,11 @@ export const Footer = () => {
               href="#"
               className="opacity-60 hover:opacity-100"
             >
-              Discord
+              Facebbok
             </a>
           </div>
 
-          <div>
-            <a
-              rel="noreferrer noopener"
-              href="#"
-              className="opacity-60 hover:opacity-100"
-            >
-              Twitch
-            </a>
-          </div>
+
         </div>
       </section>
 
@@ -159,7 +151,7 @@ export const Footer = () => {
             href="https://www.linkedin.com/in/leopoldo-miranda/"
             className="text-primary transition-all border-primary hover:border-b-2"
           >
-            Leo Miranda
+            Raúl González
           </a>
         </h3>
       </section>

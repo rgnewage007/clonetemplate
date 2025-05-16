@@ -28,12 +28,12 @@ export const HeroCards = () => {
           </Avatar>
 
           <div className="flex flex-col">
-            <CardTitle className="text-lg">John Doe React</CardTitle>
+            <CardTitle className="text-lg">Raúl González</CardTitle>
             <CardDescription>@john_doe</CardDescription>
           </div>
         </CardHeader>
 
-        <CardContent>This landing page is awesome!</CardContent>
+        <CardContent>Sigue nuestra historia!</CardContent>
       </Card>
 
       {/* Team */}
@@ -44,16 +44,15 @@ export const HeroCards = () => {
             alt="user avatar"
             className="absolute grayscale-[0%] -top-12 rounded-full w-24 h-24 aspect-square object-cover"
           />
-          <CardTitle className="text-center">Leo Miranda</CardTitle>
+          <CardTitle className="text-center">Raúl González</CardTitle>
           <CardDescription className="font-normal text-primary">
-            Frontend Developer
+            QA
           </CardDescription>
         </CardHeader>
 
         <CardContent className="text-center pb-2">
           <p>
-            I really enjoy transforming ideas into functional software that
-            exceeds expectations
+            No me imagine las dimensiones del proyecto, me gusta que también sea mi pasión.
           </p>
         </CardContent>
 
@@ -112,7 +111,7 @@ export const HeroCards = () => {
       <Card className="absolute top-[150px] left-[50px] w-72  drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader>
           <CardTitle className="flex item-center justify-between">
-            Free
+            Precio
             <Badge
               variant="secondary"
               className="text-sm text-primary"
@@ -121,24 +120,24 @@ export const HeroCards = () => {
             </Badge>
           </CardTitle>
           <div>
-            <span className="text-3xl font-bold">$0</span>
-            <span className="text-muted-foreground"> /month</span>
+            <span className="text-3xl font-bold">$ 17,500.00</span>
+            <span className="text-muted-foreground"> /Unidad</span>
           </div>
 
           <CardDescription>
-            Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.
+            Modelo IMPERA WIFI 0012 vending con wifi y audio integrado.
           </CardDescription>
         </CardHeader>
 
         <CardContent>
-          <Button className="w-full">Start Free Trial</Button>
+          <Button className="w-full">Conoce sus características</Button>
         </CardContent>
 
         <hr className="w-4/5 m-auto mb-4" />
 
         <CardFooter className="flex">
           <div className="space-y-4">
-            {["4 Team member", "4 GB Storage", "Upto 6 pages"].map(
+            {["Lleva el registro de ventas", "Con wifi integrado", "Incluye audio", "Solenoides"].map(
               (benefit: string) => (
                 <span
                   key={benefit}
@@ -160,10 +159,9 @@ export const HeroCards = () => {
             <LightBulbIcon />
           </div>
           <div>
-            <CardTitle>Light & dark mode</CardTitle>
+            <CardTitle>Tienes Dudas</CardTitle>
             <CardDescription className="text-md mt-2">
-              Lorem ipsum dolor sit amet consect adipisicing elit. Consectetur
-              natusm.
+              Siempre contáctame al 55 2327 6806 responderé pronto
             </CardDescription>
           </div>
         </CardHeader>

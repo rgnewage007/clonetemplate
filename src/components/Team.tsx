@@ -63,7 +63,7 @@ const teamList: TeamProps[] = [
   {
     imageUrl: "https://i.pravatar.cc/150?img=36",
     name: "Ashley Ross",
-    position: "Frontend Developer",
+    position: "QA",
     socialNetworks: [
       {
         name: "Linkedin",

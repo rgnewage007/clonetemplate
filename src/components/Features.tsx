@@ -39,14 +39,14 @@ const features: FeatureProps[] = [
 
 const featureList: string[] = [
   "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
+  "Levanta un ticket",
+  "Características",
+  "Precios",
+  "Contacto",
+  "Nuestro Equipo",
   "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Nuevas noticias",
+
 ];
 
 export const Features = () => {
@@ -58,7 +58,7 @@ export const Features = () => {
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
         Many{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          Características imperiales
         </span>
       </h2>
 
