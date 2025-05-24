@@ -10,28 +10,29 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     icon: <MedalIcon />,
-    title: "Accessibility",
+    title: "Accesibilidad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Diseñada para ser intuitiva, cómoda y segura, nuestra máquina es accesible para personas con movilidad reducida y compatible con la mayoría de las plantas purificadoras.",
   },
   {
     icon: <MapIcon />,
-    title: "Community",
+    title: "Comunidad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Conectamos con nuestros clientes, generando información para su capacitación para crear redes de distribución de agua confiables, impulsando el desarrollo local y el acceso al agua de calidad.",
   },
   {
     icon: <PlaneIcon />,
-    title: "Scalability",
+    title: "Escalabilidad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Gracias a su diseño modular y facilidad de operación, puedes empezar con una unidad y expandirte a múltiples ubicaciones con un sistema centralizado.",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
+    title: "Compatibilidad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
+      "Nuestra máquina vending es compatible con la mayoría de sistemas de purificación de agua existentes, lo que facilita su integración sin necesidad de modificaciones complejas.",
+  }
+
 ];
 
 export const HowItWorks = () => {

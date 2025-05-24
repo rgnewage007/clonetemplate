@@ -14,11 +14,11 @@ export const Statistics = () => {
       description: "Solicitudes",
     },
     {
-      quantity: "11+",
+      quantity: "4+",
       description: "Accesorios",
     },
     {
-      quantity: "4",
+      quantity: "2",
       description: "Productos",
     },
   ];

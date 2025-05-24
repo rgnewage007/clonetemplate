@@ -18,34 +18,34 @@ interface FeatureProps {
 
 const features: FeatureProps[] = [
   {
-    title: "Responsive Design",
+    title: "Instrucciones claras",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "La máquina guía al usuario con instrucciones claras, sencillas y visibles directamente en pantalla, facilitando su uso para cualquier persona.",
     image: image4,
   },
   {
-    title: "Intuitive user interface",
+    title: "Interfaz intuitiva",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "La dispensación es fácil de usar y está acompañado de instrucciones en audio integrado, ideal para todo tipo de usuarios, incluyendo personas con discapacidad visual.",
     image: image3,
   },
   {
-    title: "AI-Powered insights",
+    title: "Plataforma integral",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Si ya eres cliente, tienes acceso a nuestra plataforma integral de monitoreo, donde podrás consultar ventas, bitácoras, y manuales tanto de la vending como del proceso completo de purificación de agua.",
     image: image,
   },
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Levanta un ticket",
-  "Características",
-  "Precios",
-  "Contacto",
-  "Nuestro Equipo",
-  "Responsive design",
-  "Nuevas noticias",
+  "Lista para operar",
+  "Asesoría 24/7",
+  "Alta compatibilidad",
+  "Precios competitivos",
+  "Asesoría de expertos",
+  "Wifi Integrado",
+  "Plataforma Integrada",
+  "Información para la comunidad",
 
 ];
 
@@ -56,7 +56,7 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+        Excelentes{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Características imperiales
         </span>

@@ -18,18 +18,7 @@ const sponsors: SponsorProps[] = [
     icon: <Radar size={34} />,
     name: "Sponsor 3",
   },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 4",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 5",
-  },
-  {
-    icon: <Radar size={34} />,
-    name: "Sponsor 6",
-  },
+
 ];
 
 export const Sponsors = () => {
@@ -38,7 +27,7 @@ export const Sponsors = () => {
       id="sponsors"
       className="container pt-24 sm:py-32"
     >
-      <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
+      {/* <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
         Investors and founders
       </h2>
 
@@ -52,7 +41,7 @@ export const Sponsors = () => {
             <h3 className="text-xl  font-bold">{name}</h3>
           </div>
         ))}
-      </div>
+      </div>*/}
     </section>
   );
 };

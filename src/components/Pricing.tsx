@@ -26,12 +26,12 @@ interface PricingProps {
 
 const pricingList: PricingProps[] = [
   {
-    title: "Free",
+    title: "Placa Vending con Programa",
     popular: 0,
-    price: 0,
+    price: 400,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get Started",
+      "Placa con programa precargado para nuestros clientes.",
+    buttonText: "Adquierelo en mercado libre",
     benefitList: [
       "1 Team member",
       "2 GB Storage",
@@ -41,12 +41,12 @@ const pricingList: PricingProps[] = [
     ],
   },
   {
-    title: "Premium",
+    title: "Modelo IMPERA WIFI 0012 ",
     popular: 1,
-    price: 5,
+    price: 17500,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Vending completo con wifi y audio integrado.",
+    buttonText: "Adquierelo en mercado libre",
     benefitList: [
       "4 Team member",
       "4 GB Storage",
@@ -56,11 +56,11 @@ const pricingList: PricingProps[] = [
     ],
   },
   {
-    title: "Enterprise",
+    title: "Kit de remplazo a convencional",
     popular: 0,
-    price: 40,
+    price: 5000,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      "Kit que esta diseñado para reemplazar a la placas convencionales.",
     buttonText: "Contact US",
     benefitList: [
       "10 Team member",
@@ -79,16 +79,15 @@ export const Pricing = () => {
       className="container py-24 sm:py-32"
     >
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        Get
+        Conoce
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           {" "}
-          Unlimited{" "}
+          nuestros{" "}
         </span>
-        Access
+        productos
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+        Elije el que mejor se adapte a tus necesidades.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (

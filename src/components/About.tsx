@@ -23,7 +23,7 @@ export const About = () => {
                 de la compañia
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Se inician operaciones en México en el 2025, ayudando en el camino a muchas empresas dedicadas a la distribución de agua potable, en asesorías, en su instalación y en el dominio de entregar agua con la calidad que se merecen.
+                Se inician operaciones en México en el 2024, ayudando en el camino a muchas empresas dedicadas a la distribución de agua potable, en asesorías, en su instalación y en el dominio de entregar agua con la calidad que se merecen.
               </p>
             </div>
 
